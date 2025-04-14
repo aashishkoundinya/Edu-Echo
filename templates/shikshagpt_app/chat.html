@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduEcho - Teaching Session</title>
+    <link rel="stylesheet" href="{% static 'css/chat.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar with history -->
+        <div class="sidebar">
+            <div class="logo">
+                <h1>EduEcho</h1>
+            </div>
+            <div class="history-title">
+                <h3>Your Topics</h3>
+                <button id="new-topic-btn" class="new-topic-btn">+ New Topic</button>
+            </div>
+            <div class="topics-list" id="topics-list">
+                <!-- Topics will be added here dynamically -->
+                <!-- Example: -->
+                <div class="topic-item active">
+                    <div class="topic-name">Current Topic</div>
+                    <div class="topic-date">Just now</div>
+                </div>
+            </div>
+        </div>
+        <!-- Main chat area -->
+        <div class="main-content">
+            <!-- Topic info and confidence meter -->
+            <div class="topic-header">
+                <div class="current-topic">
+                    <h2 id="current-topic-title">Topic Name</h2>
+                    <span id="proficiency-badge" class="proficiency-badge">Intermediate</span>
+                </div>
+                <div class="confidence-container">
+                    <div class="confidence-label">
+                        <span>Confidence Level</span>
+                        <span id="confidence-percentage">70%</span>
+                    </div>
+                    <div class="confidence-meter">
+                        <div id="confidence-bar" class="confidence-bar" style="width: 70%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat messages container -->
+            <div class="chat-container" id="chat-container">
+                <!-- Messages will be added here dynamically -->
+                <div class="message ai-message">
+                    <div class="message-content">
+                        <p>Hello! I'm your AI student. I'm eager to learn about <span id="topic-placeholder">this topic</span> from you. What would you like to teach me?</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input area -->
+            <div class="input-container">
+                <textarea 
+                    id="user-input" 
+                    class="user-input" 
+                    placeholder="Explain the concept to your AI student..." 
+                    rows="1"
+                ></textarea>
+                <button id="mic-btn" class="mic-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                        <line x1="12" y1="19" x2="12" y2="23"></line>
+                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                    </svg>
+                </button>
+                <button id="send-btn" class="send-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading indicator -->
+    <div id="loading-indicator" class="loading-indicator">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <script src="{% static 'js/chat.js' %}"></script>
+</body>
+</html>

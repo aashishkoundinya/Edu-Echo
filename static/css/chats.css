@@ -1,0 +1,193 @@
+/* Chat History Page Styles */
+.chats-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+
+.page-subtitle {
+    font-size: 1.1rem;
+    color: var(--light-text);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.search-container {
+    margin-bottom: 2rem;
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(84, 104, 255, 0.1);
+}
+
+.chats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.chat-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.chat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-topic {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.chat-proficiency {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--white);
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    padding: 0.2rem 0.5rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.chat-date {
+    font-size: 0.85rem;
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+.chat-messages {
+    font-size: 0.85rem;
+    color: var(--light-text);
+    display: flex;
+    gap: 0.5rem;
+}
+
+.chat-confidence {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.confidence-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--light-text);
+}
+
+.confidence-bar-container {
+    height: 6px;
+    width: 100%;
+    background-color: #e5e7eb;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 0.25rem;
+}
+
+.confidence-bar {
+    height: 100%;
+    border-radius: 3px;
+    background: linear-gradient(to right, var(--warning-color), var(--success-color));
+    transition: width 0.5s ease;
+}
+
+.chat-card.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #e5e7eb;
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--light-text);
+}
+
+.empty-state svg {
+    margin-bottom: 1rem;
+    color: var(--light-text);
+}
+
+.empty-state h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+    margin-bottom: 1.5rem;
+}
+
+.empty-state .start-btn {
+    display: inline-block;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.empty-state .start-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(84, 104, 255, 0.2), 0 4px 6px -2px rgba(84, 104, 255, 0.1);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .chats-grid {
+        grid-template-columns: 1fr;
+    }
+}

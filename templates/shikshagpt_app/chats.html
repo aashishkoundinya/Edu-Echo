@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduEcho - Chat History</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/chats.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>EduEcho</h1>
+            </div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/chats/" class="active">Chats</a>
+            </div>
+        </nav>
+
+        <main class="chats-container">
+            <h1 class="page-title">Your Learning Sessions</h1>
+            <p class="page-subtitle">Continue learning from where you left off</p>
+            
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search by topic...">
+            </div>
+            
+            <div class="chats-grid" id="chats-grid">
+                <!-- Chat sessions will be loaded here dynamically -->
+                <div class="chat-card loading">
+                    <div class="loading-spinner"></div>
+                </div>
+            </div>
+            
+            <div class="empty-state" id="empty-state" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="8" y1="15" x2="16" y2="15"></line>
+                    <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                    <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                </svg>
+                <h2>No chats found</h2>
+                <p>Start a new learning session to see it here</p>
+                <a href="/" class="start-btn">Start Teaching</a>
+            </div>
+        </main>
+    </div>
+
+    <script src="{% static 'js/chats.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduEcho - Learn by Teaching</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <h1>EduEcho</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="{% url 'chats' %}">Chats</a>
+            </div>
+        </nav>
+
+        <main class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Learn by Teaching</h1>
+                <p class="hero-subtitle">Explain concepts to your AI student and master them yourself.</p>
+                
+                <form id="topic-form" class="topic-form">
+                    <div class="form-group">
+                        <label for="topic">What topic do you want to teach?</label>
+                        <input type="text" id="topic" name="topic" placeholder="e.g., Photosynthesis, Gravity, Fractions..." required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="proficiency">How would you rate your knowledge on this topic?</label>
+                        <select id="proficiency" name="proficiency" required>
+                            <option value="" disabled selected>Select your proficiency level</option>
+                            <option value="beginner">Beginner - I know the basics</option>
+                            <option value="intermediate">Intermediate - I understand most concepts</option>
+                            <option value="advanced">Advanced - I can explain it well</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="start-btn">Start Teaching</button>
+                </form>
+            </div>
+            
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/500x400" alt="Student teaching AI illustration">
+            </div>
+        </main>
+
+        <section class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3>Learn by Teaching</h3>
+                <p>Reinforce your understanding by explaining concepts to your AI student.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Works Offline</h3>
+                <p>Continue learning even without internet connection.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📈</div>
+                <h3>Track Progress</h3>
+                <p>Monitor your confidence and mastery of topics over time.</p>
+            </div>
+        </section>
+    </div>
+    
+    <script src="{% static 'js/script.js' %}"></script>
+    <script>
+    
+</script>    
+</body>
+</html>
