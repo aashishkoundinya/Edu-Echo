@@ -144,8 +144,8 @@ Last run on these versions
 
 ## Team Details
 
-Team Name - Cypher
-Team Number - E28
+Team Name - Cypher  
+Team Number - E28  
 Team Hackathon Repo - [https://github.com/AdvayaHackathon/114.Cypher](https://github.com/AdvayaHackathon/114.Cypher)
 
 - Aashish A Koundinya
