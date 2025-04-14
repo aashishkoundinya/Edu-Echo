@@ -4,15 +4,6 @@
 
 EduEcho is an educational web application designed to help students learn by teaching concepts to an AI student. It follows the powerful pedagogical principle that explaining concepts to others is one of the most effective ways to reinforce your own understanding.
 
-## Team Members
-
-Team Number - E28
-
-- Aashish A Koundinya
-- Bharadwaj Balaji
-- Bhuvan G S
-- Rahul Rajasekharan Menon
-
 ## Tech Stack
 
 Last run on these versions
@@ -150,3 +141,14 @@ Last run on these versions
 
     * Open Telegram and search for your bot by username
     * Send `/start` to begin a learning session
+
+## Team Details
+
+Team Name - Cypher
+Team Number - E28
+Team Hackathon Repo - [https://github.com/AdvayaHackathon/114.Cypher](https://github.com/AdvayaHackathon/114.Cypher)
+
+- Aashish A Koundinya
+- Bharadwaj Balaji
+- Bhuvan G S
+- Rahul Rajasekharan Menon
